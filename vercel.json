@@ -7,7 +7,7 @@
     }],
     "routes": [
         {
-            "src": "/(.index.html)",
+            "src": "/(.*)",
             "dest": "myblog/wsgi.py"
         }
     ]
