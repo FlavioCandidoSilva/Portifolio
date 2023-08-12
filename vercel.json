@@ -1,14 +1,14 @@
-
 {
-    "builds": [{
+    "builds": [
+      {
         "src": "myblog/wsgi.py",
-        "use": "@vercel/python",
-        "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
-    }],
+        "use": "@vercel/python"
+      }
+    ],
     "routes": [
-        {
-            "src": "**/*.py",
-            "dest": "myblog/wsgi.py"
-        }
+      {
+        "src": "/(.*)",
+        "dest": "myblog/wsgi.py"
+      }
     ]
-}
+  }
